@@ -17,11 +17,7 @@ function reverseString(str) {
 function checkPalindrome(str) {
     var strSpace = str.replace(/ /g, "");
     var strNoPunct = strSpace.replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
-    if (strNoPunct.toLowerCase() === reverseString(str).toLowerCase()) {
-        return true;
-    } else {
-        return false;
-    }
+    return strNoPunct.toLowerCase() === reverseString(str).toLowerCase();
 }
 checkPalindrome("raCe caR");
 checkPalindrome("0_0 (: /-\ :) 0-0");
