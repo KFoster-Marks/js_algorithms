@@ -1,5 +1,18 @@
 /* Return true if the given string is a palindrome. Otherwise, return false.*/
 
+//Following is a much simpler solution than one written below
+
+function checkPalindrome(str) {
+    var strNoSpaces = str.replace(/ /g, "").replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
+    console.log(strNoSpaces);
+    return strNoSpaces.toLowerCase() === strNoSpaces.split('').reverse().join('').toLowerCase();
+}
+checkPalindrome("raCe caR");
+//checkPalindrome("0_0 (t: /-\ :) 0-0");
+
+
+//Solution below is overly-complicated
+/*
 function reverseString(str) {
   var inputString = str;
   var holdingArray = [];
@@ -12,22 +25,13 @@ function reverseString(str) {
   var noSymbols = noSpace.replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
   console.log(noSymbols);
   return noSymbols;
-} 
+}
 
 function checkPalindrome(str) {
     var strSpace = str.replace(/ /g, "");
     var strNoPunct = strSpace.replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
-    if (strNoPunct.toLowerCase() === reverseString(str).toLowerCase()) {
-        return true;
-    } else {
-        return false;
-    }
+    return strNoPunct.toLowerCase() === reverseString(str).toLowerCase();
 }
 checkPalindrome("raCe caR");
 checkPalindrome("0_0 (: /-\ :) 0-0");
-
-
-
-
-
-
+*/
