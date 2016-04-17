@@ -3,12 +3,13 @@
 //Following is a much simpler solution than one written below
 
 function checkPalindrome(str) {
-    var strNoSpaces = str.replace(/ /g, "").replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
-    console.log(strNoSpaces);
-    return strNoSpaces.toLowerCase() === strNoSpaces.split('').reverse().join('').toLowerCase();
+    var strClean = str.replace(/ /g, "").replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
+    console.log(strClean);
+    return strClean.toLowerCase() === strClean.split('').reverse().join('').toLowerCase();
 }
+checkPalindrome("Bob");
 checkPalindrome("raCe caR");
-//checkPalindrome("0_0 (t: /-\ :) 0-0");
+checkPalindrome("0_0 (t: /-\ :) 0-0");
 
 
 //Solution below is overly-complicated

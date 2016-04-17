@@ -46,7 +46,11 @@ function whereAreYou(collection, source) {
 	}
   return arr;
 }
+<<<<<<< HEAD
 
+=======
+//https://repl.it/CFhL/13
+>>>>>>> 70f032cdf18dc6cb475afe857a02df5fe5863cf8
 whereAreYou([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 }); /* should return [{ "a": 1, "b": 2 }, { "a": 1, "b": 2, "c": 2 }] */
 //whereAreYou([{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }], { "a": 1 }); /*should return [{ "a": 1 }, { "a": 1 }, { "a": 1, "b": 2 }] */
 //whereAreYou([{ first: "Romeo", last: "Montague" }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" }); /* should return [{ first: "Tybalt", last: "Capulet" }] */
