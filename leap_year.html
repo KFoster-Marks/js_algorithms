@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leap Year</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+
+    var year = prompt("What year would you like to check?");
+
+    if (year < 1752) {
+      alert("People didn't calculate leap years yet!");
+    } else if (year == 1752) {
+      alert("This was the FIRST leap year! How cool is that?");
+    } else if (year % 100 === 0 && year % 400 !== 0) {
+      alert("Nope, that wasn't a leap year");
+    }
+    else if (year % 4 === 0) {
+      alert("Yup, this was a leap year");
+    } else {
+      alert("Nope, that wasn't a leap year.")
+    }
+
+
+    </script>
+  </body>
+</html>
