@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script>
+
+      var noun = prompt("What should we count?");
+      var num = prompt("How many are there of this thing?")
+
+      if (noun.endsWith('ss') || noun.endsWith('sh') || noun.endsWith('ch') || noun.endsWith('x')) {
+        alert("We've got " + num + " " + noun + "es");
+      } else if (noun.endsWith('ay') || noun.endsWith('ey') || noun.endsWith('iy') || noun.endsWith('oy') || noun.endsWith('uy')) {
+        alert("We've got " + num + " " + noun + "s");
+      } else if (noun.endsWith("y")) {
+        alert("We've got " + num + " " + (noun.slice(0, -1)) + "ies");
+      } else if (noun.endsWith("f")) {
+        alert("We've got " + num + " " + (noun.slice(0, -1)) + "ves");
+      } else if (noun.endsWith("fe")) {
+        alert("We've got " + num + " " + (noun.slice(0, -2)) + "ves");
+      } else if (noun.endsWith("is")) {
+        alert("We've got " + num + " " + (noun.slice(0, -2)) + "es");
+      } else if (noun == "fish" || noun == "sheep" || noun == "deer" || noun == "moose") {
+        alert("We've got " + num + " " + noun);
+      } else {
+        alert("Uh-oh. That's an irregular noun. This makes my computer brain hurt.")
+      }
+
+    </script>
+
+
+  </body>
+</html>
