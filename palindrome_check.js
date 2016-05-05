@@ -2,6 +2,8 @@
 
 //Following is a much simpler solution than one written below
 
+
+//simply regex below
 function checkPalindrome(str) {
     var strClean = str.replace(/ /g, "").replace(/['!"#$%&\\'()\*+,\-\.\/:;<=>?@\[\\\]\^_`{|}~']/g,"");
     console.log(strClean);
