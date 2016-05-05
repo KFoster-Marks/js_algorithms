@@ -1,0 +1,15 @@
+function daysInMonth(month) {
+    month = month.toLowerCase();
+    if (month === "september"
+      || month === "april"
+      || month === "june"
+      || month === "november"
+    ) {
+        console.log("There are 30 days in " + month);
+    } else  if (month === "february") {
+        console.log("There are 28 days in " + month);
+    } else {
+        console.log("There are 31 days in " + month);
+    }
+}
+daysInMonth("FEBRUARY");
