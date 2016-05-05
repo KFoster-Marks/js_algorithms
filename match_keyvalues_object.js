@@ -11,14 +11,14 @@ The Plan
 function whereAreYou(collection, source) {
 	var arr = [];
 	var sourceKeys = Object.keys(source);
-	console.log("There are " + sourceKeys.length + " keys in this object.");
+	//console.log("There are " + sourceKeys.length + " keys in this object.");
 	if (sourceKeys.length == 1) {
 		var sourceKey = Object.keys(source).toString();
-		console.log("Only one key exists; doing the first loop");
+		//console.log("Only one key exists; doing the first loop");
 		for (i=0; i<collection.length; i++) {
-			console.log(collection[i]);
+			//console.log(collection[i]);
 			if (collection[i].hasOwnProperty(sourceKey) && collection[i][sourceKey] == source[sourceKey]) {
-				console.log("The key exists, and it matches");
+				//console.log("The key exists, and it matches");
 				arr.push(collection[i]);
 			} else {
 				console.log("That key-value pair does not exist");
@@ -30,13 +30,13 @@ function whereAreYou(collection, source) {
 		var key2 = sourceKeys[1];
 		//console.log(sourceKeys, key1, key2);
 		for (i=0; i<collection.length; i++) {
-			console.log(collection[i]);
+			//console.log(collection[i]);
 			if (collection[i].hasOwnProperty(key1) && collection[i].hasOwnProperty(key2)) {
-				console.log("Both keys exist in the target object");
+				//console.log("Both keys exist in the target object");
 				//console.log(collection[i][key1]);
 				//console.log(source[key2]);
 				if (collection[i][key1] == source[key1] && collection[i][key2] == source[key2]) {
-					console.log("Both key-value pairs match, so we'll push to the array");
+					//console.log("Both key-value pairs match, so we'll push to the array");
 					arr.push(collection[i]);
 				}
 			} else {
