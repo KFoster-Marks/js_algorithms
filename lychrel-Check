@@ -23,7 +23,6 @@ module.exports = {
   isLychrel: function(num) {
     //addReverse function called here
     var addedNums = addReverse(num);
-    console.log("Result of calling addReverse function " + addedNums);
     //returned # checked with isPalindrome function
     if (isPalindrome(addedNums)) {
       return false;
