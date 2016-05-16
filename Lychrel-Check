@@ -1,0 +1,34 @@
+function reverseNum(num) {
+  return Number(String(num).split('').reverse().join(''));
+}
+
+function addReverse(num) {
+  //1. Swaps the position of each number (so 41 would become 14)
+  var numReversed = reverseNum(num);
+  // 2. Adds it to the original number (41 + 14)
+  var addedNums = num + numReversed;
+  return addedNums;
+}
+
+function isPalindrome(num) {
+  var numReversed = reverseNum(num);
+  if (num !== numReversed) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
+module.exports = {
+  isLychrel: function(num) {
+    //addReverse function called here
+    var addedNums = addReverse(num);
+    console.log("Result of calling addReverse function " + addedNums);
+    //returned # checked with isPalindrome function
+    if (isPalindrome(addedNums)) {
+      return false;
+    } else {
+      return this.isLychrel(addedNums);
+    }
+  }
+}
