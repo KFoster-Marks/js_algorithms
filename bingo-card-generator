@@ -1,0 +1,25 @@
+var bingoCard = [];
+function getCard() {
+  populateCard("B", 1, 15, 5);
+  populateCard("I", 16, 30, 10);
+  populateCard("N", 31, 45, 14);
+  populateCard("G", 46, 60, 19);
+  populateCard("O", 61, 75, 24);
+  console.log(bingoCard);
+  return bingoCard;
+}
+
+function populateCard(column, min, max, cardLength) {
+  var number;
+  var usedNumbers = [];
+  while (bingoCard.length < cardLength) {
+      number = (Math.random() * (max - min) + min).toFixed(0);
+      if (usedNumbers.indexOf(number) === -1) {
+        usedNumbers.push(number);
+        bingoCard.push(column + number);
+      } else {
+        console.log(number + " already used");
+      }
+  }
+}
+getCard();
