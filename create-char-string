@@ -1,0 +1,15 @@
+//creates a lowercase alphabet string
+
+function createCharString() {
+  var alphaCodeArr = [];
+  var b = 97;
+  while (b < 123) {
+    alphaCodeArr.push(b);
+    b++;
+  }
+  var charString = '';
+  for (var i = 0; i < alphaCodeArr.length; i++) {
+    charString = charString + String.fromCharCode(alphaCodeArr[i]);
+  }
+  return charString;
+}
