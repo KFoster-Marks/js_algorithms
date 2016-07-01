@@ -1,0 +1,32 @@
+'use strict';
+
+function factorialDigitSum(n) {
+  n = String(factorial(n));
+  var nSplit = n.split('');
+  var sum = sumArr(nSplit);
+  console.log("The final sum is: " + sum);
+}
+
+factorialDigitSum(20);
+
+function factorial(n) {
+  console.log("*******");
+  var product = n;
+  var count = n;
+  check(n);
+  while (count > 1) {
+    count = count - 1;
+    product = count * product;
+  }
+  console.log(product);
+  return product;
+}
+
+function check(n) {
+  if (n < 1) {
+    console.log("That's a negative number, fool!");
+  } else if (n === 0) {
+    console.log(1);
+    return 1;
+  }
+}
