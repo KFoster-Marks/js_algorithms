@@ -8,3 +8,11 @@ function timedEvent() {
 
 timedEvent();
 
+
+function intervalEvent() {
+	timeoutID = window.setInterval(function() {
+		console.log('Hello world');
+	}, 5000);
+}
+
+intervalEvent();
