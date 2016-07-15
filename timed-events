@@ -1,0 +1,10 @@
+//events can be set and clear with timers using the Window object timing methods
+
+function timedEvent() {
+	timeoutID = window.setTimeout(function() {
+		alert('This alert should appear after three seconds');
+	}, 3000);
+}
+
+timedEvent();
+
