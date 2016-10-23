@@ -15,17 +15,15 @@ function scrambleWords(arr){
       regEx = /[.,\/#!$%\^&\*;:{}=\-_`~()?]/g,
       scrambledWord,
       currentWord,
-      lastChar,
       str;
 
   for (var i = 0; i < arr.length; i++){
     currentWord = arr[i].split('');
-    lastChar = currentWord[currentWord.length - 1];
 
-    if(lastChar.match(regEx) === null) {
-      scrambledWord = shuffle(currentWord.splice(1, currentWord.length - 2));
-    } else {
+    if(regEx.test(currentWord)) {
       scrambledWord = shuffle(currentWord.splice(1, currentWord.length - 3));
+    } else {
+      scrambledWord = shuffle(currentWord.splice(1, currentWord.length - 2));
     }
 
     for (var j = 0; j < scrambledWord.length; j++){
